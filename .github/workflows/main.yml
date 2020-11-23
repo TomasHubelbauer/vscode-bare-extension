@@ -15,3 +15,7 @@ jobs:
         code -v
         WORKSPACE=$(node .)
         cat $WORKSPACE/index.log
+    - uses: actions/upload-artifact@v2
+      with:
+        name: tmp
+        path: /tmp
