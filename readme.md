@@ -49,3 +49,7 @@ If I ever do publish an extension using this method, I'll update this to show
 how I did it. Most likely the process will require using `vsce package` to pack
 the extension directory up to a VSIX archive and then `vsce publish` to submit
 the extension to the VS Code Marketplace.
+
+## To-Do
+
+### Figure out why the `index.log` file is empty in CI - extension not working
