@@ -49,15 +49,3 @@ If I ever do publish an extension using this method, I'll update this to show
 how I did it. Most likely the process will require using `vsce package` to pack
 the extension directory up to a VSIX archive and then `vsce publish` to submit
 the extension to the VS Code Marketplace.
-
-## To-Do
-
-### Figure out why in the workflow the process runs indefinitely
-
-Maybe the IPC doesn't work?
-
-### Look into how the test runner quits VS Code extension host
-
-When using `npm test` in a generated extension, VS Code is started in a way
-where the test runner is made to run and then the VS Code window is closed. I
-might be able to steal the approach taken there to properly close VS Code here.
