@@ -14,4 +14,4 @@ jobs:
         sudo snap install --classic code
         code -v
         node .
-        cat index.log
+        ls -a
