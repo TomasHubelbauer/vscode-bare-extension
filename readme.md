@@ -55,3 +55,9 @@ the extension to the VS Code Marketplace.
 ### Figure out why in the workflow the process runs indefinitely
 
 Maybe the IPC doesn't work?
+
+### Look into how the test runner quits VS Code extension host
+
+When using `npm test` in a generated extension, VS Code is started in a way
+where the test runner is made to run and then the VS Code window is closed. I
+might be able to steal the approach taken there to properly close VS Code here.

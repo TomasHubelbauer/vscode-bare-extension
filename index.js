@@ -2,7 +2,7 @@ import child_process from 'child_process';
 import net from 'net';
 
 void function () {
-  child_process.exec(`code --extensions-dir ${process.cwd()}`, { timeout: 10_000 });
+  child_process.exec(`code --extensions-dir ${process.cwd()}`);
 
   // Create an extension IPC server (Windows: named pipes, Unix: domain sockets)
   const server = net.createServer(socket => {
@@ -24,4 +24,8 @@ void function () {
 
   // Listen for extension completion signal on a well-known port
   server.listen(6789);
+
+  // Kill as the CI would otherwise run for about 5 hours
+  // TODO: Fix the extension not talking to this process and remove this
+  setTimeout(process.exit, 10_000);
 }()
