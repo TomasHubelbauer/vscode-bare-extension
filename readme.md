@@ -2,7 +2,13 @@
 
 This is an example of the most minimal VS Code extension I was able to develop.
 
-It consists of two files: `index.js` and `package.json`.
+It consists of two files in `tomashubelbauer.extension`:
+`index.js` and `package.json`.
+
+The `tomashubelbauer.extension` subdirectory exists because VS Code has a CLI
+switch for configuring a directory from which to run extensions and it treats
+subdirectories of this directory as extensions. This directory groups the files
+making up the barebones extension.
 
 `index.js` is the entry point and the implementation of the extension logic. At
 current, it displays the extension name and version number using the VS Code API
@@ -25,9 +31,14 @@ I dislike using code generators (`yo code`).
 
 ## Running
 
-`code --extensions-dir some-path`
+`code --extensions-dir ${.}`
 
-This directory needs to be a subdirectory of `some-path`.
+Replace `${.}` with the path of this repository directory.
+
+## Testing
+
+`node .`
+
 
 ## Publishing
 

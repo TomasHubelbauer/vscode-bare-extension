@@ -1,0 +1,16 @@
+name: github-actions
+on:
+  push:
+    branches:
+    - master
+jobs:
+  github-actions:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run the experiment
+      run: |
+        set -x
+        snap install --classic code
+        code -v
+        node .
