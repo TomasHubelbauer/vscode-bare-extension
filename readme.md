@@ -39,7 +39,6 @@ Replace `${.}` with the path of this repository directory.
 
 `node .`
 
-
 ## Publishing
 
 I haven't actually published any extension using this method yet. I know it will
@@ -50,3 +49,9 @@ If I ever do publish an extension using this method, I'll update this to show
 how I did it. Most likely the process will require using `vsce package` to pack
 the extension directory up to a VSIX archive and then `vsce publish` to submit
 the extension to the VS Code Marketplace.
+
+## To-Do
+
+### Figure out why in the workflow the process runs indefinitely
+
+Maybe the IPC doesn't work?

@@ -2,8 +2,7 @@ import child_process from 'child_process';
 import net from 'net';
 
 void function () {
-  // Note that `--verbose` should imply `--wait` but it doesn't seem to
-  child_process.exec(`code --extensions-dir ${process.cwd()}`);
+  child_process.exec(`code --extensions-dir ${process.cwd()}`, { timeout: 10_000 });
 
   // Create an extension IPC server (Windows: named pipes, Unix: domain sockets)
   const server = net.createServer(socket => {
