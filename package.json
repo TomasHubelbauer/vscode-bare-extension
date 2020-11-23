@@ -1,0 +1,12 @@
+{
+	"name": "extension",
+	"version": "0.0.0",
+	"publisher": "",
+	"main": "./index",
+	"engines": {
+		"vscode": ">=0.0.0"
+	},
+	"activationEvents": [
+		"onStartupFinished"
+	]
+}
