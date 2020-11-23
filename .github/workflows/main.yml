@@ -13,7 +13,7 @@ jobs:
         set -x
         sudo snap install --classic code
         code -v
-        $WORKSPACE=node .
+        $WORKSPACE=$(node .)
         echo $WORKSPACE
         ls -a $WORKSPACE
         cat $WORKSPACE/index.log
