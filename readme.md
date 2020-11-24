@@ -53,3 +53,10 @@ the extension to the VS Code Marketplace.
 ## To-Do
 
 ### Figure out why the `index.log` file is empty in CI - extension not working
+
+This also reproduces locally so it might be easier to debug this way. To repro,
+run `ubuntu`, then `cd` to `/mnt/…/vscode-barebones-extension` and run `node .`
+(make sure you have a recent version of Node and Code installed). This will show
+the temporary directory path as expected, but running `/mnt/…/index.log` will
+print an empty file. `node .` does not seem to run the extension and update the
+file.
