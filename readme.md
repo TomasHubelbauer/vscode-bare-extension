@@ -60,3 +60,5 @@ run `ubuntu`, then `cd` to `/mnt/…/vscode-barebones-extension` and run `node .
 the temporary directory path as expected, but running `/mnt/…/index.log` will
 print an empty file. `node .` does not seem to run the extension and update the
 file.
+
+### Replicate `npm test` so this can be used to migrate other extensions to
