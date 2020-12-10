@@ -13,5 +13,5 @@ jobs:
         set -x
         sudo snap install --classic code
         code -v
-        WORKSPACE=$(node .)
-        cat $WORKSPACE/index.log
+        git submodule update --init
+        node .
