@@ -40,6 +40,12 @@ void async function () {
 
       if (line === 'Waiting for the debugger to disconnect...') {
         // TODO: Send CDP debugger detach instruction
+        if (process.env.CI) {
+          console.log(arg);
+          console.log(await fs.promises.readFile(arg));
+          process.exit();
+        }
+        
         continue;
       }
 
