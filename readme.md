@@ -37,7 +37,12 @@ Replace `${.}` with the path of this repository directory.
 
 ## Testing
 
-`node .`
+To not have testing and developing mess with up your VS Code instance, open up a
+terminal window in the repository directory and alternate these two commands as
+needed:
+
+- `node .` to test/run the code
+- `code .` to open the repository directory in VS Code
 
 ## Publishing
 

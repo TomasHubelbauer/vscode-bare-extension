@@ -1,0 +1,3 @@
+[submodule "node-cdp-ws"]
+	path = node-cdp-ws
+	url = https://github.com/TomasHubelbauer/node-cdp-ws
