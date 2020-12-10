@@ -42,7 +42,7 @@ void async function () {
         // TODO: Send CDP debugger detach instruction
         if (process.env.CI) {
           console.log(arg);
-          console.log(await fs.promises.readFile(path.join(arg, 'index.log')));
+          console.log(await fs.promises.readFile(path.join(arg, 'index.log'), 'utf-8'));
           process.exit();
         }
         
