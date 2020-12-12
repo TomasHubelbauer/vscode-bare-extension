@@ -23,7 +23,12 @@ void async function () {
         const url = line.slice('Debugger listening on '.length);
         send = await cdp(url, console.log);
 
-        // TODO: Update such that we are in Electron process with `process.mainModule.require('electron')`
+        // TODO: Update to work like `code-extension-screencast`:
+        // Either we are not getting the right process by using --inspect on the
+        // Code instance we're starting or we somehow are talking to it too soon
+        // or something, but the commented out expression does not work even tho
+        // it does in that repository. It might also be a macOS problem as that
+        // repository has only been tested on Windows and Ubuntu.
         //const expression = `process.mainModule.require('electron').webContents.getAllWebContents().find(wc => wc.browserWindowOptions.show !== false).webContents.capturePage().then(nativeImage => nativeImage.toDataURL())`;
         const expression = `new Date().toISOString()`;
         send({ id: 1, method: 'Runtime.evaluate', params: { expression, awaitPromise: true } });
