@@ -1,17 +1,18 @@
-name: github-actions
-on:
-  push:
-    branches:
-    - master
+name: main
+on: push
+
 jobs:
-  github-actions:
+  main:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Check out the source code
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
     - name: Run the experiment
       run: |
         set -x
         sudo snap install --classic code
         code -v
-        git submodule update --init
         node .
