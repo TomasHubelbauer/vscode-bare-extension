@@ -66,4 +66,8 @@ the temporary directory path as expected, but running `/mnt/…/index.log` will
 print an empty file. `node .` does not seem to run the extension and update the
 file.
 
-### Replicate `npm test` so this can be used to migrate other extensions to
+### Transfer over the currently working logic from code-extension-screencast
+
+https://github.com/TomasHubelbauer/code-extension-screencast
+
+Need to figure out how to simplify the extension runner to work with this.
